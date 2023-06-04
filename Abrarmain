@@ -1,0 +1,15 @@
+def calculate_sales_revenue(sales_data, target_revenue):
+    total_revenue = 0
+
+    for sale in sales_data:
+        quantity = sale['quantity']
+        price = sale['price']
+        revenue = quantity * price
+        total_revenue += revenue
+
+    if total_revenue >= target_revenue:
+        print("Sales target achieved!")
+    else:
+        print("Sales target not achieved.")
+
+    return total_revenue
